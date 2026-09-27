@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Altec | Tienda Interactiva</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header id="siteHeader">
+  <div class="headerTop">
+    <div class="logo">Al<span>tec</span></div>
+    <div class="searchBox">
+      <input type="text" id="searchInput" placeholder="Buscar producto...">
+    </div>
+    <button id="cartToggle" class="cartToggle">
+      🛒 <span id="cartCount">0</span>
+    </button>
+  </div>
+  <nav class="categoryNav" id="categoryNav">
+    <button class="catBtn active" data-cat="Todos">Todos</button>
+    <button class="catBtn" data-cat="Electrónica">Electrónica</button>
+    <button class="catBtn" data-cat="Ropa">Ropa</button>
+    <button class="catBtn" data-cat="Libros">Libros</button>
+  </nav>
+</header>
+
+<section id="promoBanner" class="promoBanner">
+  <p>Oferta relámpago: descuentos por volumen en toda la tienda. Termina en <span id="countdown">05:00</span></p>
+</section>
+
+<main>
+  <section id="productSection">
+    <h2 class="sectionTitle">Catálogo de Productos</h2>
+    <div id="productGrid" class="productGrid"></div>
+  </section>
+
+  <aside id="cartPanel" class="cartPanel">
+    <div class="cartHeader">
+      <h2>Tu Carrito</h2>
+      <button id="closeCart" class="closeCart">✕</button>
+    </div>
+    <div id="cartItems" class="cartItems"></div>
+    <div class="cartSummary">
+      <div class="summaryRow">
+        <span>Puntos de fidelidad</span>
+        <span id="loyaltyPoints">0</span>
+      </div>
+      <div class="summaryRow total">
+        <span>Total</span>
+        <span id="cartTotal">S/ 0.00</span>
+      </div>
+      <input type="text" id="couponInput" placeholder="Código de cupón (ej. VERANO10)">
+      <button id="checkoutBtn" class="checkoutBtn">Finalizar compra</button>
+    </div>
+  </aside>
+</main>
+
+<section id="eventLogSection" class="eventLogSection">
+  <div class="eventLogHeader" id="eventLogHeader">
+    <h3>Panel de eventos (captura y burbujeo)</h3>
+    <button id="clearLog" class="clearLog">Limpiar</button>
+  </div>
+  <div id="eventLog" class="eventLog"></div>
+</section>
+
+<div id="toast" class="toast"></div>
+
+<div id="modalOverlay" class="modalOverlay">
+  <div class="modalBox">
+    <h3 id="modalTitle"></h3>
+    <p id="modalBody"></p>
+    <button id="modalClose" class="modalCloseBtn">Cerrar</button>
+  </div>
+</div>
+
+<footer id="siteFooter">
+  <p>Altec &mdash; Nuevo proyecto de prueba no es un sitio real.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
